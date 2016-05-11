@@ -191,3 +191,8 @@
   #{$property}: -moz-calc(#{$value});
   #{$property}: calc(#{$value});
 }
+
+// function to set appearance
+@mixin appearance($value) {
+  @include prefixes(appearance, $value);
+}
