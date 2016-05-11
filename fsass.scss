@@ -1,0 +1,193 @@
+//
+//
+// @Name: Framework SASS
+// @Developer: By Daniel M. Sánchez
+// @Site: http://dmsanchez86.github.io
+// @Twitter: http://twitter.com/dmsanchez86
+//
+//
+
+// Function to set all prefixes
+@mixin prefixes($property, $value) {
+    -webkit-#{$property} : $value;
+     -khtml-#{$property} : $value;
+       -moz-#{$property} : $value;
+        -ms-#{$property} : $value;
+         -o-#{$property} : $value;
+            #{$property} : $value;
+}
+
+// Function to align items to center --- display flex
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  -o-align-items: $value;
+  align-items: $value;
+}
+
+// Function to set animation
+@mixin animation($value) {
+  @include prefixes(animation, $value);
+}
+
+// Function to set direction animation
+@mixin animation-direction($value){
+  @include prefixes(animation-direction, $value);
+}
+
+// Function to set delay animation
+@mixin animation-delay($value){
+  @include prefixes(animation-delay, $value);
+}
+
+// Funtion to start or pause animation
+@mixin animation-play-state($value){
+  @include prefixes(animation-play-state, $value);
+}
+
+// function to fill animation mode
+@mixin animation-fill-mode($value){
+  @include prefixes(animation-fill-mode, $value);
+}
+
+// Function to set border radius
+@mixin border-radius($radius) {
+  @include prefixes(border-radius, $radius);
+}
+
+// Funtion to set box-shadow
+@mixin box-shadow($value) {
+  @include prefixes(box-shadow , $value);
+}
+
+// Function to set box sizing
+@mixin box-sizing($value) {
+  @include prefixes(box-sizing , $value);
+}
+
+// function to center any tag absolute
+@mixin center-absolute($position){
+  position: $position;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+// Function to set element how flex
+@mixin flex($value){
+  display: -webkit-#{$value};
+  display: -moz-#{$value};
+  display: -ms-#{$value};
+  display: -o-#{$value};
+  display: $value;
+}
+
+// Function to set element how flex-item
+@mixin flex-item($value){
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  -o-flex: $value;
+  flex: $value;
+}
+
+// Function to set direction to item with display flex
+@mixin flex-direction($value){
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  -o-flex-direction: $value;
+  flex-direction: $value;
+}
+
+// Function to set filter any item
+@mixin filter($value){
+  -webkit-filter: $value;
+  -moz-filter: $value;
+  -ms-filter: $value;
+  -o-filter: $value;
+  filter: $value;
+}
+
+// Function to set gradient
+@mixin gradient($direction, $value){
+  background-image: -webkit-#{$direction}-gradient($value);
+  background-image:  -khtml-#{$direction}-gradient($value);
+  background-image:    -moz-#{$direction}-gradient($value);
+  background-image:     -ms-#{$direction}-gradient($value);
+  background-image:      -o-#{$direction}-gradient($value);
+  background-image:         #{$direction}-gradient($value);
+}
+
+// function to init body and html
+@mixin init{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// Function to justify items to center display flex
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  -o-justify-content: $value;
+  justify-content: $value;
+}
+
+// Funtion to set perspective
+@mixin perspective($value) {
+  @include prefixes(perspective, $value);
+}
+
+// Funtion to set perspective-origin
+@mixin perspective-origin($value) {
+  @include prefixes(perspective-origin, $value);
+}
+
+// Funtion to set font Roboto
+@mixin roboto($size, $weight){
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// Funtion to set text shadow
+@mixin text-shadow($value) {
+  @include prefixes(text-shadow , $value);
+}
+
+// Funtion to set transition
+@mixin transition($value) {
+  @include prefixes(transition, $value);
+}
+
+// Funtion to set transition delay
+@mixin transition-delay($value) {
+  @include prefixes(transition-delay, $value);
+}
+
+// Function to set transforms
+@mixin transform($value){
+    @include prefixes(transform, $value);
+}
+
+// Function to set transform-origin
+@mixin transform-origin($value){
+    @include prefixes(transform-origin, $value);
+}
+
+// Function to set transform-style
+@mixin transform-style($value){
+    @include prefixes(transform-style, $value);
+}
+
+// function to set calc property
+@mixin calc($property, $value) {
+  #{$property}: -webkit-calc(#{$value});
+  #{$property}: -moz-calc(#{$value});
+  #{$property}: calc(#{$value});
+}
